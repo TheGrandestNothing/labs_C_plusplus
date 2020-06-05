@@ -9,11 +9,9 @@ using namespace std;
 
 void FillArray(int* array, int size, int min, int max)
 {
-    random_device device;
-    mt19937 randomGenerator(device());
-    uniform_int_distribution<int> distribution(min, max);
+    srand(static_cast<unsigned int>(time(NULL)));
     for (int i = 0; i < size; ++i)
-        array[i] = distribution(randomGenerator);
+        array[i] = rand() % (max - min + 1) + min;
 }
 
 int Search(int* array, int size, int value) 
