@@ -5,10 +5,7 @@ class MatrixBase
 {
 public:
 	MatrixBase() = delete;
-	unsigned int size() const
-	{
-		return m_size;
-	};
+	unsigned int size() const;
 
 	virtual int element(unsigned int i, unsigned int j) const = 0;
 	virtual int& element(unsigned int i, unsigned int j) = 0;

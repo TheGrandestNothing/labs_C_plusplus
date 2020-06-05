@@ -1,5 +1,10 @@
 #include "MatrixBase.h"
 
+unsigned int MatrixBase::size() const
+{
+	return m_size;
+}
+
 void MatrixBase::operator*=(int iMult)
 {
 	for (unsigned int i = 0; i < size(); i++)
